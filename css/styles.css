@@ -13,6 +13,22 @@ body {
   letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -33,6 +49,13 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /*----------------Header-------------------*/
 .logo {
   font-family: "Raleway", sans-serif;
@@ -42,23 +65,52 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
+  display: block;
+  margin-right: 93px;
 }
 .logo span {
   color: var(--accent-color);
 }
 
+.header-page {
+  display: flex;
+  align-items: center;
+}
+.header-nav-list {
+  display: flex;
+}
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
+
+.header-nav-list .item + .item,
+.header-contact-list .item + .item {
+  margin-left: 50px;
+}
+
 .current {
   color: var(--accent-color);
 }
 
+.header-contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
 .header-contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -73,17 +125,37 @@ body {
   color: var(--accent-color);
 }
 /*-----------------Hero--------------------*/
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.sections {
+  padding-bottom: 94px;
+}
+
+.hero {
+  text-align: center;
+  background-color: #2f303a;
+}
+
 .hero-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--other-text-color);
 }
 
 .hero-btn {
+  display: inline-block;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -97,12 +169,22 @@ body {
 .hero-btn:focus {
   background-color: #188ce8;
 }
-.hero {
-  background-color: #2f303a;
-}
 
 /*-------------Sides-----------------------*/
+.sides-list {
+  display: flex;
+}
+
+.sides-list .item {
+  width: 270px;
+  margin-right: 30px;
+}
+.sides-list .item:nth-child(4n) {
+  margin-right: 0;
+}
 .sides-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -119,18 +201,38 @@ body {
 /*---------------Work---------------------*/
 .work-title,
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
+.work-list {
+  display: flex;
+}
+
+.work-list .item {
+  margin-right: 30px;
+}
+
+.work-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
 /*-----------------Team--------------------*/
+.section.team {
+  background-color: #f5f4fa;
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-position {
   font-weight: 400;
@@ -138,6 +240,25 @@ body {
   line-height: 1.19;
   text-align: center;
   color: var(--second-text-color);
+  margin-bottom: 30px;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  width: 270px;
+  margin-right: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+  background-color: #ffffff;
+}
+
+.team-list .item:nth-child(4n) {
+  margin-right: 0;
 }
 
 /*----------------Portfolio-----------------*/
@@ -179,9 +300,15 @@ button.current {
 /*------------------Footer------------------*/
 .footer {
   background-color: #2f303a;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer .logo {
+  margin-bottom: 20px;
+
   color: #ffffff;
+  outline: 1px solid red;
 }
 .footer-address {
   font-style: normal;
@@ -197,4 +324,10 @@ button.current {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-list .item {
+  margin-bottom: 9px;
+}
+.footer-list .item:last-child {
+  margin-bottom: 0;
 }
